@@ -38,9 +38,12 @@ public class MainActivity extends AppCompatActivity {
         lvDrawer = findViewById(R.id.left_drawer);
         tab = new ArrayList<Drawer>();
 
+        ab = getSupportActionBar();
+
         tab.add(new Drawer("bio", "Bio"));
         tab.add(new Drawer("vaccination", "Vaccination"));
         tab.add(new Drawer("anniversary", "Anniversary"));
+        tab.add(new Drawer("about", "About Us"));
 
         aa = new DrawerAdapter(this, R.layout.row_drawer, tab);
         lvDrawer.setAdapter(aa);
